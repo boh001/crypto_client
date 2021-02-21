@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "lightweight-charts": "^3.3.0",
     "next": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -25,6 +26,7 @@
     "@types/socket.io-client": "^1.4.35",
     "@types/styled-components": "^5.1.7",
     "babel-plugin-styled-components": "^1.12.0",
+    "eslint-config-camelts": "^1.0.7",
     "typescript": "4.0"
   },
   "license": "MIT"
