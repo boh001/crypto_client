@@ -1,12 +1,12 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 import { PieChart, Pie, Cell } from "recharts";
 
-const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 1200 },
-  { name: "Group D", value: 200 }
-];
+interface Props {
+  data: Array<{
+    name: string;
+    value: number;
+  }>
+}
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
@@ -36,7 +36,12 @@ const renderCustomizedLabel = ({
     </text>
   );
 };
-const Portfolio = () => {
+const Portfolio = ({ data = [
+  { name: "Group A", value: 400 },
+  { name: "Group B", value: 300 },
+  { name: "Group C", value: 1200 },
+  { name: "Group D", value: 200 }
+] }: Props) => {
   return (
     <PieChart width={400} height={400}>
       <Pie
